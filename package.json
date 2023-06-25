@@ -1,0 +1,52 @@
+{
+  "name": "facebookview",
+  "productName": "Facebook Views",
+  "version": "1.0.0",
+  "description": "Application manager user",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "echo \"No linting configured\"",
+    "build-installer": "electron-builder"
+  },
+  "build": {
+    "appId": "Facebook Views",
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "asar": true
+    },
+    "nsis": {
+      "uninstallDisplayName": "Facebook Views",
+      "license": "license.txt",
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  },
+  "keywords": [],
+  "author": {
+    "name": "meomeok9",
+    "email": "118091573+meomeok9@users.noreply.github.com"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@electron/asar": "^3.2.4",
+    "edge-js": "^19.3.0",
+    "electron-squirrel-startup": "^1.0.0",
+    "electron-store": "^8.1.0",
+    "electron-window-state": "^5.0.3",
+    "fluent-ffmpeg": "^2.1.2"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^6.1.1",
+    "@electron-forge/maker-deb": "^6.1.1",
+    "@electron-forge/maker-rpm": "^6.1.1",
+    "@electron-forge/maker-squirrel": "^6.1.1",
+    "@electron-forge/maker-zip": "^6.1.1",
+    "electron": "24.3.1"
+  }
+}
